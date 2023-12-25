@@ -1,4 +1,4 @@
-package decorator
+package decorator.sample
 
 abstract class Beverage {
     protected var description: String = "Unknown beverage"

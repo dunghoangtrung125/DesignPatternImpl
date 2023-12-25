@@ -1,7 +1,7 @@
-package decorator.beverage
+package decorator.sample.beverage
 
-import decorator.Beverage
-import decorator.util.Price
+import decorator.sample.Beverage
+import decorator.sample.util.Price
 
 class Espresso : Beverage() {
     init {

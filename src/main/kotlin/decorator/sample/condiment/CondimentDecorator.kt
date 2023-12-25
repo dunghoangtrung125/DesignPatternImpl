@@ -1,6 +1,6 @@
-package decorator.condiment
+package decorator.sample.condiment
 
-import decorator.Beverage
+import decorator.sample.Beverage
 
 abstract class CondimentDecorator(protected var beverage: Beverage) : Beverage() {
 

@@ -1,7 +1,7 @@
-package decorator.condiment
+package decorator.sample.condiment
 
-import decorator.Beverage
-import decorator.util.Price
+import decorator.sample.Beverage
+import decorator.sample.util.Price
 
 class Milk(beverage: Beverage) : CondimentDecorator(beverage) {
 

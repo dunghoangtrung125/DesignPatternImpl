@@ -1,7 +1,7 @@
-package decorator.condiment
+package decorator.sample.condiment
 
-import decorator.Beverage
-import decorator.util.Price
+import decorator.sample.Beverage
+import decorator.sample.util.Price
 
 class Whip(beverage: Beverage) : CondimentDecorator(beverage) {
     override fun cost(): Double = beverage.cost() + Price.WHIP

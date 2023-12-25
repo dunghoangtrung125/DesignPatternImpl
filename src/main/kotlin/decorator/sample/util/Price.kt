@@ -1,4 +1,4 @@
-package decorator.util
+package decorator.sample.util
 
 object Price {
     const val ESPRESSO = 20.0
