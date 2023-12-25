@@ -1,8 +1,10 @@
 package observer.sample.subject
 
+import observer.sample.WeatherData
 import observer.sample.observer.Observer
 
-class WeatherDataService : Subject {
+class WeatherService : Subject {
+    private lateinit var data: WeatherData
     private val observers = mutableListOf<Observer>()
 
     override fun register(o: Observer) {
@@ -15,12 +17,19 @@ class WeatherDataService : Subject {
 
     override fun notifyChange() {
         for (o in observers) {
-            println("Notify data change for ${o.name}")
+            println("Notify data change to ${o.name}")
             o.update()
         }
     }
 
-    fun setData() {
-
+    fun setData(data: WeatherData) {
+        this.data = data
+        notifyChange()
     }
+
+    fun getTemperature() = data.temperature
+
+    fun getHumidity() = data.humidity
+
+    fun getPressure() = data.pressure
 }
